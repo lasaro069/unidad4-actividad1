@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity, } from "react-native";
 import { Asset } from "expo-asset";
@@ -99,13 +101,13 @@ const Profile = ({selectedImageBanner, setSelectedImageBanner }) => {
 const styles = StyleSheet.create({
   containerProfile: {
     width: "100%",
-    height: 320,
-    backgroundColor: "#1c0033"
+    height: 250,
+    backgroundColor: "#91E0C0"
   },
 
   containerUserBanner: {
     width: "100%",
-    height: 220,
+    height: 180,
     backgroundColor: "#ccc"
   },
 
@@ -116,24 +118,25 @@ const styles = StyleSheet.create({
   },
   
   containerInfoUser: {
-    padding: 15,
+    paddingLeft: 15,
+    paddingTop: 5
   },
 
   textNameUser: {
     fontSize: 25,
     fontWeight: "800",
-    color: "#fff"
+    color: "#000"
   },
 
   textProfessionUser: {
-    fontSize: 12,
-    fontWeight: "300",
-    color: "#fff"
+    fontSize: 14,
+    fontWeight: "400",
+    color: "#000"
   },
 
   containerUserProfile: {
     position: "absolute",
-    top: 150,
+    top: 110,
     right: 25
   },
 
@@ -143,7 +146,7 @@ const styles = StyleSheet.create({
     height: 131,
     borderRadius: 100,
     borderWidth: 5,
-    borderColor: "#214484",
+    borderColor: "#e76d53",
   },
 });
 

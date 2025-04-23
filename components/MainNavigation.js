@@ -1,7 +1,7 @@
 import React from "react";
-import { Image } from "react-native";
+import { Image, Icon } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons } from "@react-native-community/masked-view";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import Publicaciones from "./Publicaciones";
 import Fotos from "./Fotos";
 
@@ -12,19 +12,21 @@ const MainNavigation = () => {
 
   return(
 
+
     <Tab.Navigator
       screenOptions={{
         tabBArShowIcon: false,
         tabBarStyle: {
-          backgroundColor: "#514484",
+          backgroundColor: "#3BA485",
           borderTop: 1,
+          height: 55,
           borderColor: "#000",
         },
-        tabBarActiveTintColor: "#ffc93c",
-        tabBarInactiveTintColor: "#fff",
+        tabBarActiveTintColor: "#FBC36C",
+        tabBarInactiveTintColor: "#D3CFCE",
         tabBarLabelStyle: {
-          fontSize: 12,
-          fontWeight: "500"
+          fontSize: 16,
+          fontWeight: "800"
         }
       }}
     >
@@ -34,9 +36,12 @@ const MainNavigation = () => {
         component={Publicaciones} 
         options={{
           headerShown: false,
-          tabBarLabel: 'Publicaciones',
+          tabBarLabel: 'Recetas',
           tabBarIcon: ({ color, size }) => (
-            <Image source={require("../assets/img/news.png")} name="news" color={color} size={size}  />
+
+            <MaterialCommunityIcons name="newspaper-variant" color={color} size={size} />
+
+            // <Image source={require("../assets/img/news.png")} name="news" color={color} size={size}  />
           )
         }}
 
@@ -49,11 +54,13 @@ const MainNavigation = () => {
           headerShown: false,
           tabBarLabel: 'Fotos',
           tabBarIcon: ({ color, size }) => (
-            <Image source={require("../assets/img/camera.png")} name="camera" color={color} size={size}  />
+            <MaterialCommunityIcons name="camera" color={color} size={size} />
+            //<Image source={require("../assets/img/camera.png")} name="camera" color={color} size={size}  />
           )
         }} />
 
     </Tab.Navigator>
+
 
 
   );

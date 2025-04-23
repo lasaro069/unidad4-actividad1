@@ -20,17 +20,22 @@ const App = () => {
   return (
     <ImageProvider>
       <NavigationContainer>
+
+        {/* Barra superior del menú del telefono */}
         <View style={{ width: "100%", height: 35, backgroundColor: "#000" }} ></View>
 
-        <ScrollView style={{ backgroundColor: "#1c0033" }}>
+        <ScrollView style={{ backgroundColor: "#91E0C0" }}>
           {/* ************  SECCION PERIFL DEL USUARIO ***************** */}
           <Profile
             selectedImageBanner={selectedImageBanner}
             setSelectedImageBanner={setSelectedImageBanner}
           />
 
-          <View style={{width: "100%", height: 510 }}>
-            <View style={{ width: "100%", height: 2, backgroundColor: "#000" }} ></View>
+          {/* contenedor de   las publicaciones */}
+          <View style={{width: "100%", height: 585 }}>
+
+            {/* liea divisoria de info de perfil y las publicaciones */}
+            <View style={{ width: "100%", height: 2, backgroundColor: "#e76d53" }} ></View>
             <MainNavigation />
           </View>
 
